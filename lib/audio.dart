@@ -5,6 +5,83 @@ class Audio extends StatefulWidget {
   _AudioState createState() => _AudioState();
 }
 
+class Place {
+  String imageUrl;
+  String name;
+  String subname;
+
+  Place({this.imageUrl, this.name, this.subname});
+}
+
+List wonders = [
+  Place(
+      imageUrl:
+      "https://images.unsplash.com/photo-1597466765990-64ad1c35dafc",
+      name: "Lorem Ipsum is simply dummy text of the printing",
+      subname: "Lorem Ipsum . 04:33"),
+  Place(
+      imageUrl:
+      "https://images.unsplash.com/photo-1597466765990-64ad1c35dafc",
+      name: "Lorem Ipsum is simply dummy text of the printing",
+      subname: "Lorem Ipsum . 04:33"),
+  Place(
+      imageUrl:
+      "https://images.unsplash.com/photo-1597466765990-64ad1c35dafc",
+      name: "Lorem Ipsum is simply dummy text of the printing",
+      subname: "Lorem Ipsum . 04:33"),
+  Place(
+      imageUrl:
+      "https://images.unsplash.com/photo-1597466765990-64ad1c35dafc",
+      name: "Lorem Ipsum is simply dummy text of the printing",
+      subname: "Lorem Ipsum . 04:33"),
+  Place(
+      imageUrl:
+      "https://images.unsplash.com/photo-1597466765990-64ad1c35dafc",
+      name: "Lorem Ipsum is simply dummy text of the printing",
+      subname: "Lorem Ipsum . 04:33"),
+  Place(
+      imageUrl:
+      "https://images.unsplash.com/photo-1597466765990-64ad1c35dafc",
+      name: "Lorem Ipsum is simply dummy text of the printing",
+      subname: "Lorem Ipsum . 04:33"),
+  Place(
+      imageUrl:
+      "https://images.unsplash.com/photo-1597466765990-64ad1c35dafc",
+      name: "Lorem Ipsum is simply dummy text of the printing",
+      subname: "Lorem Ipsum . 04:33"),
+  Place(
+      imageUrl:
+      "https://images.unsplash.com/photo-1597466765990-64ad1c35dafc",
+      name: "Lorem Ipsum is simply dummy text of the printing",
+      subname: "Lorem Ipsum . 04:33"),
+  Place(
+      imageUrl:
+      "https://images.unsplash.com/photo-1597466765990-64ad1c35dafc",
+      name: "Lorem Ipsum is simply dummy text of the printing",
+      subname: "Lorem Ipsum . 04:33"),
+  Place(
+      imageUrl:
+      "https://images.unsplash.com/photo-1597466765990-64ad1c35dafc",
+      name: "Lorem Ipsum is simply dummy text of the printing",
+      subname: "Lorem Ipsum . 04:33"),
+  Place(
+      imageUrl:
+      "https://images.unsplash.com/photo-1597466765990-64ad1c35dafc",
+      name: "Lorem Ipsum is simply dummy text of the printing",
+      subname: "Lorem Ipsum . 04:33"),
+  Place(
+      imageUrl:
+      "https://images.unsplash.com/photo-1597466765990-64ad1c35dafc",
+      name: "Lorem Ipsum is simply dummy text of the printing",
+      subname: "Lorem Ipsum . 04:33"),
+  Place(
+      imageUrl:
+      "https://images.unsplash.com/photo-1597466765990-64ad1c35dafc",
+      name: "Lorem Ipsum is simply dummy text of the printing",
+      subname: "Lorem Ipsum . 04:33"),
+];
+
+
 class _AudioState extends State<Audio> {
 
   @override
@@ -14,282 +91,15 @@ class _AudioState extends State<Audio> {
         height: 900.0,
         child: Stack(
           children:<Widget>[
-            Padding(
-              padding: const EdgeInsets.only(top: 10),
-              child: ListView(
-                children: [
-                  ListTile(
-                    title: Text('Lorem Ipsum is simply dummy text of the printing',style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 13
-                    )),
-                    subtitle: Text('Lorem Ipsum . 04:33',style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 11
-                    )),
-                    leading: SizedBox(
-                        width: 60,
-                        height: 30,
-                        child: Image.network("https://images.unsplash.com/photo-1597466765990-64ad1c35dafc", fit: BoxFit.cover)
-                    ),
-                    trailing: Icon(
-                      Icons.more_vert,
-                    ),
-                  ),
-                ],
-              ),
+            ListView.builder(
+              itemCount: wonders.length,
+              itemBuilder: (context, index) {
+                return ListTile(leading: SizedBox(width: 65,
+                    height: 35,child: Image.network(wonders[index].imageUrl,fit: BoxFit.cover)), title: Text(wonders[index].name), subtitle: Text(wonders[index].subname),trailing: Icon(
+                  Icons.more_vert,
+                ),);
+              },
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 70),
-              child: ListView(
-                children: [
-                  ListTile(
-                    title: Text('Lorem Ipsum is simply dummy text of the printing',style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 13
-                    )),
-                    subtitle: Text('Lorem Ipsum . 04:33',style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 11
-                    )),
-                    leading: SizedBox(
-                        width: 60,
-                        height: 30,
-                        child: Image.network("https://images.unsplash.com/photo-1597466765990-64ad1c35dafc", fit: BoxFit.cover)
-                    ),
-                    trailing: Icon(
-                      Icons.more_vert,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 130),
-              child: ListView(
-                children: [
-                  ListTile(
-                    title: Text('Lorem Ipsum is simply dummy text of the printing',style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 13
-                    )),
-                    subtitle: Text('Lorem Ipsum . 04:33',style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 11
-                    )),
-                    leading: SizedBox(
-                        width: 60,
-                        height: 30,
-                        child: Image.network("https://images.unsplash.com/photo-1597466765990-64ad1c35dafc", fit: BoxFit.cover)
-                    ),
-                    trailing: Icon(
-                      Icons.more_vert,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 190),
-              child: ListView(
-                children: [
-                  ListTile(
-                    title: Text('Lorem Ipsum is simply dummy text of the printing',style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 13
-                    )),
-                    subtitle: Text('Lorem Ipsum . 04:33',style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 11
-                    )),
-                    leading: SizedBox(
-                        width: 60,
-                        height: 30,
-                        child: Image.network("https://images.unsplash.com/photo-1597466765990-64ad1c35dafc", fit: BoxFit.cover)
-                    ),
-                    trailing: Icon(
-                      Icons.more_vert,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 250),
-              child: ListView(
-                children: [
-                  ListTile(
-                    title: Text('Lorem Ipsum is simply dummy text of the printing',style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 13
-                    )),
-                    subtitle: Text('Lorem Ipsum . 04:33',style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 11
-                    )),
-                    leading: SizedBox(
-                        width: 60,
-                        height: 30,
-                        child: Image.network("https://images.unsplash.com/photo-1597466765990-64ad1c35dafc", fit: BoxFit.cover)
-                    ),
-                    trailing: Icon(
-                      Icons.more_vert,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 315),
-              child: ListView(
-                children: [
-                  ListTile(
-                    title: Text('Lorem Ipsum is simply dummy text of the printing',style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 13
-                    )),
-                    subtitle: Text('Lorem Ipsum . 04:33',style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 11
-                    )),
-                    leading: SizedBox(
-                        width: 60,
-                        height: 30,
-                        child: Image.network("https://images.unsplash.com/photo-1597466765990-64ad1c35dafc", fit: BoxFit.cover)
-                    ),
-                    trailing: Icon(
-                      Icons.more_vert,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 375),
-              child: ListView(
-                children: [
-                  ListTile(
-                    title: Text('Lorem Ipsum is simply dummy text of the printing',style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 13
-                    )),
-                    subtitle: Text('Lorem Ipsum . 04:33',style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 11
-                    )),
-                    leading: SizedBox(
-                        width: 60,
-                        height: 30,
-                        child: Image.network("https://images.unsplash.com/photo-1597466765990-64ad1c35dafc", fit: BoxFit.cover)
-                    ),
-                    trailing: Icon(
-                      Icons.more_vert,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 435),
-              child: ListView(
-                children: [
-                  ListTile(
-                    title: Text('Lorem Ipsum is simply dummy text of the printing',style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 13
-                    )),
-                    subtitle: Text('Lorem Ipsum . 04:33',style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 11
-                    )),
-                    leading: SizedBox(
-                        width: 60,
-                        height: 30,
-                        child: Image.network("https://images.unsplash.com/photo-1597466765990-64ad1c35dafc", fit: BoxFit.cover)
-                    ),
-                    trailing: Icon(
-                      Icons.more_vert,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 495),
-              child: ListView(
-                children: [
-                  ListTile(
-                    title: Text('Lorem Ipsum is simply dummy text of the printing',style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 13
-                    )),
-                    subtitle: Text('Lorem Ipsum . 04:33',style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 11
-                    )),
-                    leading: SizedBox(
-                        width: 60,
-                        height: 30,
-                        child: Image.network("https://images.unsplash.com/photo-1597466765990-64ad1c35dafc", fit: BoxFit.cover)
-                    ),
-                    trailing: Icon(
-                      Icons.more_vert,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 565),
-              child: ListView(
-                children: [
-                  ListTile(
-                    title: Text('Lorem Ipsum is simply dummy text of the printing',style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 13
-                    )),
-                    subtitle: Text('Lorem Ipsum . 04:33',style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 11
-                    )),
-                    leading: SizedBox(
-                        width: 60,
-                        height: 30,
-                        child: Image.network("https://images.unsplash.com/photo-1597466765990-64ad1c35dafc", fit: BoxFit.cover)
-                    ),
-                    trailing: Icon(
-                      Icons.more_vert,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 635),
-              child: ListView(
-                children: [
-                  ListTile(
-                    title: Text('Lorem Ipsum is simply dummy text of the printing',style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 13
-                    )),
-                    subtitle: Text('Lorem Ipsum . 04:33',style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 11
-                    )),
-                    leading: SizedBox(
-                        width: 60,
-                        height: 30,
-                        child: Image.network("https://images.unsplash.com/photo-1597466765990-64ad1c35dafc", fit: BoxFit.cover)
-                    ),
-                    trailing: Icon(
-                      Icons.more_vert,
-                    ),
-                  ),
-                ],
-              ),
-            )
-
           ],
         ),
       ),
